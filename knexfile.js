@@ -6,9 +6,9 @@ const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhos
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: "sqlite3",
     connection: {
-      filename: './database/count.db3'
+      filename: "./database/count.db3",
     },
     useNullAsDefault: true,
     pool: {
@@ -17,10 +17,10 @@ module.exports = {
     },
   },
     migrations: {
-      directory: "./database/migrations"
+      directory: "./database/migrations",
     },
     seeds: {
-      directory: './database/seeds'
+      directory: "./database/seeds",
     }
   },
 
@@ -38,7 +38,7 @@ module.exports = {
   // },
 
   production: {
-    client: 'pg',
+    client: "pg",
     connection: pgConnection,
     pool: {
       min: 2,
@@ -48,7 +48,7 @@ module.exports = {
     directory: "./database/migrations",
     },
     seeds: {
-      directory: './database/seeds'
+      directory: "./database/seeds",
     }
   }
 
