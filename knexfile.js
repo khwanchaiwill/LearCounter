@@ -6,7 +6,7 @@ const { pgConnection } = require("./config/vars")
 module.exports = {
 
   development: {
-    client: "sqlite3",
+    client: "pg",
     connection: {
       filename: "./database/count.db3",
     },
