@@ -1,13 +1,14 @@
 // Update with your config settings.
-// require("dotenv").config();
-// const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost/count";
+
 const { pgConnection } = require("./config/vars")
 
 module.exports = {
 
   development: {
     client: "pg",
-    connection: pgConnection,
+    connection: {
+      filename: "./database/count.db3",
+    },
     useNullAsDefault: true,
     pool: {
       afterCreate: (conn, done) => {
