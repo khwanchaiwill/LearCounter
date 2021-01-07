@@ -1,6 +1,7 @@
 // Update with your config settings.
-
-const { pgConnection } = require("./config/vars")
+require("dotenv").config();
+const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost/count"
+// const { pgConnection } = require("./config/vars")
 
 module.exports = {
 
