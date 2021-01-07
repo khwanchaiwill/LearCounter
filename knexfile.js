@@ -6,8 +6,10 @@ const { pgConnection } = require("./config/vars")
 module.exports = {
 
   development: {
-    client: "pg",
-    connection: pgConnection,
+    client: "sqlite3",
+    connection: {
+      filename: "./database/count.db3",
+    },
     useNullAsDefault: true,
     pool: {
       afterCreate: (conn, done) => {
