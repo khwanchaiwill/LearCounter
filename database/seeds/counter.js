@@ -4,7 +4,7 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('counter').insert([
-        {id: 1, count: 0}
+        {id: 1, count: 25883}
       ]);
     });
 };
